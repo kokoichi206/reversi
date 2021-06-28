@@ -16,15 +16,17 @@
   - `python random_main.py`
   ![](img/random_main.png)
 
+- weight_1.py
+  - [ある法則](https://uguisu.skr.jp/othello/5-1.html)に従って打ってくるCPUとの戦い
+  - ターミナル上
+  - `python weight_1.py`
+
 - kivy/reversi.py
   - GUIでコンピュータと戦える
   - ランダム(EASY)かDQNで強くした敵(HARD)か選べる
   - `python ./kivy/reversi.py`
   ![](img/kivy_main.png)
 
-- weight_1.py
-  - [ある法則](https://uguisu.skr.jp/othello/5-1.html)に従って打ってくるCPUとの戦い
-  - `python weight_1.py`
 
 ## 強化学習やってみた
 
