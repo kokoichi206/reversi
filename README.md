@@ -57,6 +57,3 @@ vs computer following [this method](https://uguisu.skr.jp/othello/5-1.html) 300 
     - DQNなど
 
 
-30862/
-29196/
-15350/
