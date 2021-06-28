@@ -1,0 +1,514 @@
+<Button>	
+     font_size: 32
+#     color: 0,1,0,1
+#     size_hint: 0.11, 0.11
+     font_name: 'ipag.ttf'
+
+
+<MyLayout>
+     BoxLayout:
+          orientation: "horizontal"
+          size: root.width, root.height
+
+
+          BoxLayout:
+               orientation: "vertical"
+               size_hint: 660/880, 1
+
+               Button:
+                    size_hint: (1, 80/880)
+                    font_size: 30
+                    text: "START"
+                    on_press: root.clear()
+                    id: clear_button
+
+
+               GridLayout:
+                    size_hint: (1, 80/880)
+                    cols: 2
+                    rows: 1
+                    Label:
+                         size_hint: (0.5, 0.5)
+                         font_size: 35
+                         text: ""
+                         id: black_num
+                    Label:
+                         id: white_num
+                         size_hint: (0.5, 0.5)
+                         font_size: 35
+                         text: ""
+                         background_color: (157/255, 157/255, 157/255, 1)
+
+               GridLayout:
+                    size_hint: (1, 640/1000)
+                    cols: 8
+                    rows: 8
+
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("00")
+                         id: 00
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("01")
+                         id: 01
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("02")
+                         id: 02
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("03")
+                         id: 03
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("04")
+                         id: 04
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("05")
+                         id: 05
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("06")
+                         id: 06
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("07")
+                         id: 07
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("10")
+                         id: 10
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("11")
+                         id: 11
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("12")
+                         id: 12
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("13")
+                         id: 13
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("14")
+                         id: 14
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("15")
+                         id: 15
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("16")
+                         id: 16
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("17")
+                         id: 17
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("20")
+                         id: 20
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("21")
+                         id: 21
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("22")
+                         id: 22
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("23")
+                         id: 23
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("24")
+                         id: 24
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("25")
+                         id: 25
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("26")
+                         id: 26
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("27")
+                         id: 27
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("30")
+                         id: 30
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("31")
+                         id: 31
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("32")
+                         id: 32
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("33")
+                         id: 33
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("34")
+                         id: 34
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("35")
+                         id: 35
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("36")
+                         id: 36
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("37")
+                         id: 37
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("40")
+                         id: 40
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("41")
+                         id: 41
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("42")
+                         id: 42
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("43")
+                         id: 43
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("44")
+                         id: 44
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("45")
+                         id: 45
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("46")
+                         id: 46
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("47")
+                         id: 47
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("50")
+                         id: 50
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("51")
+                         id: 51
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("52")
+                         id: 52
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("53")
+                         id: 53
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("54")
+                         id: 54
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("55")
+                         id: 55
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("56")
+                         id: 56
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("57")
+                         id: 57
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("60")
+                         id: 60
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("61")
+                         id: 61
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("62")
+                         id: 62
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("63")
+                         id: 63
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("64")
+                         id: 64
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("65")
+                         id: 65
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("66")
+                         id: 66
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("67")
+                         id: 67
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("70")
+                         id: 70
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("71")
+                         id: 71
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("72")
+                         id: 72
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("73")
+                         id: 73
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("74")
+                         id: 74
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("75")
+                         id: 75
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("76")
+                         id: 76
+                    Button:
+                         size_hint: (.2, .2)
+                         font_size: 45
+                         text: ""
+                         on_press: root.buttonClicked("77")
+                         id: 77
+
+               Label:
+                    size_hint: (1, 80/880)
+                    font_size: 30
+                    text: ""
+                    id: turn_display
+                    font_name: 'ipag.ttf'
+
+
+          # right side
+          BoxLayout:
+               orientation: "vertical"
+               size_hint: 240/880, 1
+
+               FloatLayout:
+
+                    # black part
+                    Label:
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 660
+                         font_size: 25
+                         text: "BLACK:●"
+                         id: black_label
+                         font_name: 'ipag.ttf'
+
+                    Button:
+                         id: black_human
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 600
+                         font_size: 25
+                         text: "HUMAN"
+                         background_color: 204/255, 204/255, 204/255, 1
+                         on_press: root.cpu_button("black_human")
+                    Button:
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 540
+                         font_size: 22
+                         text: "CPU EASY"
+                         id: black_cpu
+                         background_color: 157/255, 157/255, 1, 1
+                         on_press: root.cpu_button("black_cpu")
+                    Button:
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 480
+                         font_size: 22
+                         text: "CPU HARD"
+                         id: black_cpu_hard
+                         background_color: 204/255, 204/255, 204/255, 1
+                         on_press: root.cpu_button("black_cpu_hard")
+
+
+                    # white part
+                    Label:
+                         id: white_label
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 380
+                         font_size: 25
+                         text: "WHITE:◯"
+                         background_color: (157/255, 157/255, 157/255, 1)
+                         font_name: 'ipag.ttf'
+                    Button:
+                         id: white_human
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 320
+                         font_size: 25
+                         text: "HUMAN"
+                         background_color: 157/255, 157/255, 1, 1
+                         on_press: root.cpu_button("white_human")
+                    Button:
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 260
+                         font_size: 22
+                         text: "CPU EASY"
+                         id: white_cpu
+                         background_color: 204/255, 204/255, 204/255, 1
+                         on_press: root.cpu_button("white_cpu")
+                    Button:
+                         size_hint: (200/240, 60/880)
+                         pos: 660, 200
+                         font_size: 22
+                         text: "CPU HARD"
+                         id: white_cpu_hard
+                         background_color: 204/255, 204/255, 204/255, 1
+                         on_press: root.cpu_button("white_cpu_hard")
