@@ -42,7 +42,11 @@ vs computer following [this method](https://uguisu.skr.jp/othello/5-1.html) 300 
 ## その他
 
 ### Tic_Tac_Toe
-
+- 英語で三目並べって意味らしい
+- 入門で、三目並べで`Q-learning`やってみた
+- これくらいまでの状態数なら普通のQ-learningでいける
+  - オセロぐらいになると状態数が爆発するので、もうひと工夫必要
+    - DQNなど
 
 
 30862/
