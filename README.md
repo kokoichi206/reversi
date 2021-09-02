@@ -30,19 +30,19 @@
 
 ## 強化学習やってみた
 
-### What have I done
-- This mode is trained by machine learning.
-- The source code is in /learning folder.
-- This model is trained using 10000*4 matches.
+### やったこと
+- /learning folder. にある
+- 10000*4 試合戦わせて強くしてみてる
 
-### vs random computer 300 matches:
-|win|lose|draw|
+### ランダムなコンピュータとの戦い
+|勝ち|負け|引き分け|
 |---|---|---|
 |261|36|3|
 
-### cf. weight method
-vs computer following [this method](https://uguisu.skr.jp/othello/5-1.html) 300 matches:
-|win|lose|draw|
+### 一定の法則に従って打つコンピュータとの比較
+[簡単な法則](https://uguisu.skr.jp/othello/5-1.html)に従って打つコンピュータとランダムなものとの戦い
+
+|勝ち|負け|引き分け|
 |---|---|---|
 |218|70|2|
 
@@ -55,5 +55,3 @@ vs computer following [this method](https://uguisu.skr.jp/othello/5-1.html) 300 
 - これくらいまでの状態数なら普通のQ-learningでいける
   - オセロぐらいになると状態数が爆発するので、もうひと工夫必要
     - DQNなど
-
-
