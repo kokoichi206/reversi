@@ -1,6 +1,7 @@
 import random
 import sys
 import numpy as np
+import os
 
 
 class Board(object):
@@ -70,8 +71,12 @@ class Player_random(object):
           # print(board.find_board_number())
 
 class Player_learning(object):
-     def __init__(self, turn, table=None):
-          self.turn = turn
+     def __init__(self, turn, epsilon, rate, discount, reward, table=None):
+          self.turn      = turn
+          self.epsilon   = epsilon
+          self.rate      = rate
+          self.discount  = discount
+          self.reward = reward
           if table is None:
                self.q_table = self.make_q_table()
           else:
@@ -87,10 +92,9 @@ class Player_learning(object):
           n_rows = 3 ** 9
           return np.zeros((n_rows, n_colums))
 
-
      def q_table_put(self, canput: list, board: Board):
           row_index = board.find_board_number()
-          if np.random.random() > epsilon:  #左辺は0から1のランダム
+          if np.random.random() > self.epsilon:  #左辺は0から1のランダム
                action = np.argmax(self.q_table[row_index])
                y = action // 3
                x = action % 3
@@ -100,14 +104,61 @@ class Player_learning(object):
                action = x + y * 3             
           board.board[x][y] = self.turn
           
-          reward = REWARD if board.judge(self.turn) is True else 0
+          reward = self.reward if board.judge(self.turn) is True else 0
 
           new_row_index = board.find_board_number()
           max_future_q = np.max(self.q_table[new_row_index])
           current_q = self.q_table[row_index][action]
-          new_q = (1 - LEARNING_RATE) * current_q + LEARNING_RATE * (reward + DISCOUNT * max_future_q)
-          # print(new_q)
+          new_q = (1 - self.rate) * current_q + self.rate * (reward + self.discount * max_future_q)
           self.q_table[row_index][action] = new_q
+
+          return action, row_index, new_row_index, max_future_q, current_q
+
+     def leaning_enemy(self, row_index, action, new_row_index, max_future_q, current_q):
+          # 負けた時はここから負の reward で学習させる
+          reward = -3
+          new_q = (1 - self.rate) * current_q + self.rate * (reward + self.discount * max_future_q)
+          self.q_table[row_index][action] = new_q
+     
+     def set_epsilon(self, epsilon):
+          self.epsilon = epsilon
+
+class Player_using_table(object):
+     def __init__(self, turn, file_path='./q_table.npy'):
+          self.turn = turn
+          if os.path.exists(file_path):
+               q_table = np.load(file_path)
+          else:
+               q_table =  np.zeros((3 ** 9, 9))  # 実質のランダム
+          self.q_table = q_table
+          self.minus_inf = -100_000
+
+     # put a piece using q_table
+     def q_table_put(self, canput: list, board: Board):
+          row_index = board.find_board_number()
+          while True:
+               action = np.argmax(self.q_table[row_index])
+               y = action // 3
+               x = action % 3
+               if [x, y] in canput:
+                    break
+               self.q_table[row_index][action] = self.minus_inf
+          
+          board.board[x][y] = self.turn
+          return action, row_index
+     
+     def q_table_put_negative(self, canput: list, board: Board):
+          row_index = board.find_board_number()
+          while True:
+               action = np.argmin(self.q_table[row_index])
+               y = action // 3
+               x = action % 3
+               if [x, y] in canput:
+                    break
+               self.q_table[row_index][action] = self.minus_inf
+          
+          board.board[x][y] = self.turn
+          return action, row_index     
 
 
 if __name__ == '__main__':
